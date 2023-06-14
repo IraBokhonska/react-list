@@ -1,0 +1,157 @@
+.todo {
+  max-width: 666px;
+  margin: 0 auto;
+}
+
+.todo-list {
+  min-height: 412px;
+  margin: 0 auto;
+
+  background-color: #25273c;
+}
+
+.todo-list {
+  &__item {
+    min-height: 82px;
+    margin: 16px 21px 21px 26px;
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 0px;
+    align-items: center;
+    &:hover {
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+  }
+
+  &__text {
+    max-width: 518px;
+    padding-left: 26px;
+    border-bottom: 4px solid rgba(72, 64, 64, 0.37);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 36px;
+    line-height: 59px;
+    letter-spacing: 0.1em;
+
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__check {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 2px solid rgba(191, 86, 255, 0.79);
+  }
+
+  .icon {
+    width: 21px;
+    height: 14px;
+    color: #ffffff;
+
+    opacity: 0;
+  }
+}
+
+//----------------form---------------------
+
+.todo {
+  &__form {
+    max-width: 660px;
+    min-height: 69px;
+    margin: 0 auto;
+    margin-bottom: 51px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #25273c;
+    border-radius: 30px;
+  }
+
+  &__input {
+    max-width: 434px;
+    padding: 8px 20px 0px 33px;
+
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.1em;
+
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #25273c;
+    border-radius: 30px 0px 0px 30px;
+  }
+
+  &__add {
+    width: 110px;
+    min-height: 69px;
+
+    background-color: rgba(90, 255, 49, 0.6);
+    border-radius: 0px 30px 30px 0px;
+
+    &:hover {
+      box-shadow: 0 0 25px rgba(90, 255, 49, 0.4);
+      transition: 0.3s;
+    }
+
+    svg {
+      margin-top: 13px;
+    }
+  }
+}
+
+// --------------toggle-----------------
+.todo-list {
+  &__check.completed {
+    background: linear-gradient(
+      111.35deg,
+      #e600fa 10.12%,
+      rgba(82, 97, 234, 0) 82.22%
+    );
+    text-decoration: line-through;
+
+    .icon {
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+}
+
+.todo-list__text.completed {
+  text-decoration: line-through;
+}
+
+// ----------------clear-----------------
+.todo {
+  &__summery {
+    min-height: 60px;
+    padding: 9px 10px 9px 26px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #25273c;
+    border: 2px solid #ad02fe;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 24px;
+    line-height: 39px;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+  }
+
+  .clear:hover {
+    text-shadow: 1px 0px 6px #ffffff;
+    transition: 0.3s;
+  }
+}
